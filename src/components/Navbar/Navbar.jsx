@@ -10,7 +10,7 @@ const Navbar = () => {
 					<Link to="/" className="flex items-center mr-4 text-indigo-300 font-semibold text-xl p-2">
 					Web <span className='text-indigo-500'>Testy</span>
 					</Link>
-					<ul className={`  absolute md:relative md:top-0 md:left-0 left-0 top-16 bg-slate-700 md:bg-transparent w-full flex flex-col md:h-full md:flex-row md:w-fit transition-all justify-between items-center p-4 md:items-stretch md:space-x-3 md:flex ${open ? 'h-0 hidden' : 'h-44 flex'}`}>
+					<ul className={`z-20  absolute md:relative md:top-0 md:left-0 left-0 top-16 bg-slate-700 md:bg-transparent w-full flex flex-col md:h-full md:flex-row md:w-fit transition-all justify-between items-center p-4 md:items-stretch md:space-x-3 md:flex ${open ? 'h-0 hidden' : 'h-44 flex'}`}>
 			<li className="flex px-5">
 				<NavLink to="/"  >Home</NavLink>
 			</li>
