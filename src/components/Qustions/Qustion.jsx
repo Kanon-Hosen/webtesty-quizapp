@@ -6,8 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Qustion = ({ qustions }) => {
     const {id, question, correctAnswer, options } = qustions;
-    const sliceQustion = question.slice(3, 500);
-    const mainQustion = sliceQustion.split('</p>');
     const answer = correctAnswer.split('  ');
     const mainAnswer = answer.join(' ');
     const [active, setActive] = useState(false);
@@ -43,7 +41,7 @@ const Qustion = ({ qustions }) => {
 	        </div>
             </div>
             </div>
-            <p className='font-bold text-xl mb-8'>{mainQustion}</p>
+            <p className='font-bold text-xl mb-8'>{question}</p>
             <div className='grid gap-x-8 gap-y-5'>
             {
                 options.map(option => {
