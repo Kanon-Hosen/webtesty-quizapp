@@ -1,26 +1,32 @@
 import React, { useState } from 'react';
-import {HiEye} from 'react-icons/hi'
+import { HiEye } from 'react-icons/hi';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Qustion = ({ qustions }) => {
     const { question, correctAnswer, options } = qustions;
     // console.log( question, correctAnswer, options )
     const sliceQustion = question.slice(3, 500);
-    const mainQustion = sliceQustion.split('</p>')
+    const mainQustion = sliceQustion.split('</p>');
     const answer = correctAnswer.split('  ');
-    const mainAnswer = answer.join(' ')
-    const [active , setActive] = useState(false)
-    const [model , setModel] = useState(true)
+    const mainAnswer = answer.join(' ');
+    const [active, setActive] = useState(false);
+    const [model, setModel] = useState(true);
+    // const notify = () => toast("Wow so easy!");
     const correctAns = (value) => {
         value.style.pointerEvents = "none";
         setActive(!active)
         console.log(mainAnswer)
         if (value.innerText === mainAnswer) {
+            toast.success('Correct answer!')
             value.style.pointerEvents = "none";
             value.style.backgroundColor= ' rgb(34, 197, 94 )'
             value.style.color= 'white'
 
         }
         else {
+            toast.error('Opps incorrect')
             value.style.backgroundColor= 'red'
             value.style.pointerEvents = "none";
             value.style.color= 'white'
@@ -48,7 +54,9 @@ const Qustion = ({ qustions }) => {
                             <button id='qus' onClick={(e) => correctAns(e.target)} className={` ${active ? 'pointer-events-none' : 'cursor-pointer'} bg-gray-100 hover:bg-slate-300 w-full text-base font-semibold p-4 rounded-full`}>
                                 {option}
                             </button>
-                        
+                            <ToastContainer
+                                autoClose={1000}
+                            />
                         </div>
                     )
                 })
