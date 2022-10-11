@@ -6,7 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Qustion = ({ qustions }) => {
     const { question, correctAnswer, options } = qustions;
-    // console.log( question, correctAnswer, options )
     const sliceQustion = question.slice(3, 500);
     const mainQustion = sliceQustion.split('</p>');
     const answer = correctAnswer.split('  ');

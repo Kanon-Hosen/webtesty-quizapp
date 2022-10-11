@@ -19,7 +19,7 @@ const Quiz = () => {
                             <p className='text-base mt-1 font-semibold text-slate-800'>Total quiz: {total}</p>
                             <div className='flex mt-2 justify-between items-center'>
                                 <p className='text-base md:text-lg font-semibold text-slate-800'>{name}</p>
-                                <Link to={`quiz/${id}`} state={name} className='text-gray-800 font-bold text-4xl transition-all hover:text-indigo-400'><HiArrowCircleRight></HiArrowCircleRight></Link>
+                                <Link key={id} to={`quiz/${id}`} state={name} className='text-gray-800 font-bold text-4xl transition-all hover:text-indigo-400'><HiArrowCircleRight></HiArrowCircleRight></Link>
                             </div>
                         </div>
                     ) 

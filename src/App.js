@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import QuizPage from "./pages/QuizPage";
 import Topics from "./pages/Topics";
 import { createContext, useEffect, useState } from "react";
+import Footer from "./pages/Footer";
 export const contextData = createContext('hello') 
 function App() {
   const [quizData, setQuiz] = useState([])
@@ -25,10 +26,12 @@ function App() {
         <Route path="/statistics" element={<Statistics></Statistics>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/quiz/:id" element={<QuizPage></QuizPage>}></Route>
+        <Route path="topics/:id" element={<QuizPage></QuizPage>}></Route>
         <Route path="/topics" element={<Topics></Topics>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
         </Routes>
       </contextData.Provider>
+      <Footer></Footer>
     </BrowserRouter>
   );
 }
