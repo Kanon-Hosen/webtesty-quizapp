@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div className=''>
             <header className="px-8 shadow-lg dark:bg-slate-800 dark:text-gray-100">
-			<div className="container flex justify-between md:justify-center h-16 mx-auto">
+			<div className="container flex justify-between items-center md:justify-center h-16 mx-auto">
 					<Link to="/" className="flex items-center mr-4 text-indigo-300 font-semibold text-xl p-2">
 					Web <span className='text-indigo-500'>Testy</span>
 					</Link>

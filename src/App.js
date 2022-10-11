@@ -22,12 +22,12 @@ function App() {
       <Navbar></Navbar>
       <contextData.Provider value={quizData}>
       <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/statistics" element={<Statistics></Statistics>}></Route>
-        <Route path="/blog" element={<Blog></Blog>}></Route>
-        <Route path="/quiz/:id" element={<QuizPage></QuizPage>}></Route>
+        <Route path="/" activeClassName="selected" element={<Home></Home>}></Route>
+        <Route path="statistics" activeClassName="selected" element={<Statistics></Statistics>}></Route>
+        <Route path="blog" activeClassName="selected" element={<Blog></Blog>}></Route>
+        <Route path="quiz/:id" element={<QuizPage></QuizPage>}></Route>
         <Route path="topics/:id" element={<QuizPage></QuizPage>}></Route>
-        <Route path="/topics" element={<Topics></Topics>}></Route>
+        <Route path="topics" activeClassName="selected" element={<Topics></Topics>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
       </contextData.Provider>

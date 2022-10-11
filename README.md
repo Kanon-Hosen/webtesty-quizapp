@@ -6,4 +6,3 @@
 <li>Statistics section you can see the our total quiz of different language.</li>
 <li>And the blog section you can see the some qustion and answer.</li>
 <li>Click any topic you see the all questions of this topics.</li>
-<button>See the live site</button>

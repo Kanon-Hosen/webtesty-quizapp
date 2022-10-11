@@ -41,13 +41,13 @@ const Qustion = ({ qustions }) => {
 	        </div>
             </div>
             </div>
-            <p className='font-bold text-xl mb-8'>{question}</p>
+            <p className='font-bold text-lg mb-8'>{question}</p>
             <div className='grid gap-x-8 gap-y-5'>
             {
                 options.map(option => {
                     return (
                         <div key={option.id}>
-                            <button id='qus' onClick={(e) => correctAns(e.target)} className={` ${active ? 'pointer-events-none' : 'cursor-pointer'} bg-gray-100 hover:bg-slate-300 w-full text-base font-semibold p-4 rounded-full`}>
+                            <button id='qus' onClick={(e) => correctAns(e.target)} className={` ${active ? 'pointer-events-none' : 'cursor-pointer'} bg-gray-200 hover:bg-slate-300 w-full text-base font-semibold p-4 rounded-full`}>
                                 {option}
                             </button>
                             <ToastContainer

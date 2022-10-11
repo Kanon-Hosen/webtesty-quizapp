@@ -13,7 +13,7 @@ const Quiz = () => {
                     quizData.map(quiz => {
                     const {id , name , logo, total} = quiz
                     return (
-                        <div key={quiz.id} className='border-2 border-slate-100 rounded overflow- p-4 w-52 md:w-60'>
+                        <div key={quiz.id} className='bg-indigo-200 border-2 border-slate-100 rounded overflow- p-4 w-52 md:w-60'>
                             <img src={logo} alt="" />
                             <p className='text-base mt-1 font-semibold text-slate-800'>Total quiz: {total}</p>
                             <div className='flex mt-2 justify-between items-center'>
