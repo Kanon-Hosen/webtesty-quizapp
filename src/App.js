@@ -7,10 +7,19 @@ import Statistics from "./pages/Statistics";
 import Navbar from "./components/Navbar/Navbar";
 import QuizPage from "./pages/QuizPage";
 import Topics from "./pages/Topics";
+import { createContext, useEffect, useState } from "react";
+export const contextData = createContext('hello') 
 function App() {
+  const [quizData, setQuiz] = useState([])
+  useEffect(() => {
+      fetch('https://openapi.programming-hero.com/api/quiz')
+          .then(res => res.json())
+          .then(data => setQuiz(data.data))
+  }, [])
   return (
     <BrowserRouter>
       <Navbar></Navbar>
+      <contextData.Provider value={quizData}>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/statistics" element={<Statistics></Statistics>}></Route>
@@ -18,7 +27,8 @@ function App() {
         <Route path="/quiz/:id" element={<QuizPage></QuizPage>}></Route>
         <Route path="/topics" element={<Topics></Topics>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
-      </Routes>
+        </Routes>
+      </contextData.Provider>
     </BrowserRouter>
   );
 }

@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import {HiArrowCircleRight} from 'react-icons/hi'
 import { Link } from 'react-router-dom';
-
+import { contextData } from '../../App';
 const Quiz = () => {
-    const [quizs, setQuiz] = useState([])
-    useEffect(() => {
-        fetch('https://openapi.programming-hero.com/api/quiz')
-            .then(res => res.json())
-            .then(data => setQuiz(data.data))
-    }, [])
-    
+    const quizData  = useContext(contextData)
+    console.log(quizData)
     return (
         <div className='mt-12 overflow-hidden'>
             <h1 className='text-center font-bold text-5xl text-slate-800'>Lets Quiz</h1>
 
         <div className='grid grid-cols-2 w-full md:grid-cols-3 mx-auto lg:grid-cols-4  md:px-8 gap-5 py-8'>
             {
-                    quizs.map(quiz => {
+                    quizData.map(quiz => {
                     const {id , name , logo, total} = quiz
                     return (
                         <div key={quiz.id} className='border-2 border-slate-100 rounded overflow- p-4 w-52 md:w-60'>
