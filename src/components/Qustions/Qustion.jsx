@@ -29,7 +29,7 @@ const Qustion = ({ qustions }) => {
     }
     return (
         
-        <div className='relative my-8 p-8 w-full md:w-1/2 mx-auto flex flex-col  shadow-lg h-fit'>
+        <div className='relative p-8 w-full my-32 md:w-1/2 mx-auto flex flex-col  shadow-lg h-fit'>
             <HiEye onClick={()=> setModel(!model)} className='absolute top-3 right-5 font-bold text-slate-800 text-3xl cursor-pointer'></HiEye>
             <div className={`transition-transform  ${model ? ' scale-0 ' : 'scale-100'} absolute top-3 right-14`}>
             <div className="flex items-start justify-between max-w-sm p-3 space-x-4 rounded-md dark:bg-gray-900 dark:text-gray-100">
