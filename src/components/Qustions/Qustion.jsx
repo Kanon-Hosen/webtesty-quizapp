@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Qustion = ({ qustions }) => {
-    const { question, correctAnswer, options } = qustions;
+    const {id, question, correctAnswer, options } = qustions;
     const sliceQustion = question.slice(3, 500);
     const mainQustion = sliceQustion.split('</p>');
     const answer = correctAnswer.split('  ');
@@ -16,7 +16,6 @@ const Qustion = ({ qustions }) => {
     const correctAns = (value) => {
         value.style.pointerEvents = "none";
         setActive(!active)
-        console.log(mainAnswer)
         if (value.innerText === mainAnswer) {
             toast.success('Correct answer!')
             value.style.pointerEvents = "none";
@@ -34,7 +33,7 @@ const Qustion = ({ qustions }) => {
     }
     return (
         
-        <div className='relative p-8 w-full my-32 md:w-1/2 mx-auto flex flex-col  shadow-lg h-fit'>
+        <div key={id} className='relative p-8 w-full my-32 md:w-1/2 mx-auto flex flex-col  shadow-lg h-fit'>
             <HiEye onClick={()=> setModel(!model)} className='absolute top-3 right-5 font-bold text-slate-800 text-3xl cursor-pointer'></HiEye>
             <div className={`transition-transform  ${model ? ' scale-0 ' : 'scale-100'} absolute top-3 right-14`}>
             <div className="flex items-start justify-between max-w-sm p-3 space-x-4 rounded-md dark:bg-gray-900 dark:text-gray-100">

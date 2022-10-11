@@ -29,7 +29,7 @@ function App() {
         <Route path="topics/:id" element={<QuizPage></QuizPage>}></Route>
         <Route path="/topics" element={<Topics></Topics>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
-        </Routes>
+      </Routes>
       </contextData.Provider>
       <Footer></Footer>
     </BrowserRouter>

@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
 import { contextData } from '../../App';
 const Quiz = () => {
     const quizData  = useContext(contextData)
-    console.log(quizData)
     return (
         <div className='mt-12 overflow-hidden'>
-            <h1 className='text-center font-bold text-5xl text-slate-800'>Lets Quiz</h1>
+            <h1 className='text-center font-bold text-5xl text-slate-800'>Some quiz for you</h1>
 
         <div className='grid grid-cols-2 w-full md:grid-cols-3 mx-auto lg:grid-cols-4  md:px-8 gap-5 py-8'>
             {

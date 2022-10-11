@@ -5,7 +5,6 @@ import Qustion from '../components/Qustions/Qustion';
 const QuizPage = () => {
     const { id } = useParams()
     const  location  = useLocation()
-    console.log(location)
     const [qustions , setQustins] = useState([])
     useEffect(() => {
         fetch(` https://openapi.programming-hero.com/api/quiz/${id}`)
