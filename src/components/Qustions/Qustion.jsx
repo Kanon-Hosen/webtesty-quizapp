@@ -34,10 +34,10 @@ const Qustion = ({ qustions }) => {
         <div key={id} className='relative p-8 w-full my-32 md:w-1/2 mx-auto flex flex-col  shadow-lg h-fit'>
             <HiEye onClick={()=> setModel(!model)} className='absolute top-3 right-5 font-bold text-slate-800 text-3xl cursor-pointer'></HiEye>
             <div className={`transition-transform  ${model ? ' scale-0 ' : 'scale-100'} absolute top-3 right-14`}>
-            <div className="flex items-start justify-between max-w-sm p-3 space-x-4 rounded-md dark:bg-gray-900 dark:text-gray-100">
+            <div className="flex items-start justify-between max-w-sm p-3 space-x-4 rounded-md bg-gray-900 text-gray-100">
 	        <div className="flex flex-col flex-1 px-2 space-y-1">
 		    <span className="text-sm font-semibold">Answer:</span>
-		    <span className="text-sm dark:text-gray-400">{correctAnswer}.</span>
+		    <span className="text-sm text-gray-400">{correctAnswer}.</span>
 	        </div>
             </div>
             </div>
