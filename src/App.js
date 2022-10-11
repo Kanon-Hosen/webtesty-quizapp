@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Statistics from "./pages/Statistics";
 import Navbar from "./components/Navbar/Navbar";
 import QuizPage from "./pages/QuizPage";
+import Topics from "./pages/Topics";
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/statistics" element={<Statistics></Statistics>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/quiz/:id" element={<QuizPage></QuizPage>}></Route>
+        <Route path="/topics" element={<Topics></Topics>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
     </BrowserRouter>

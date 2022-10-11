@@ -39,7 +39,7 @@ const Qustion = ({ qustions }) => {
 	        </div>
             </div>
             </div>
-            <p className='font-bold text-2xl mb-8'>{mainQustion}</p>
+            <p className='font-bold text-xl mb-8'>{mainQustion}</p>
             <div className='grid gap-x-8 gap-y-5'>
             {
                 options.map(option => {
